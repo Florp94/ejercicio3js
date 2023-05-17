@@ -1,9 +1,3 @@
-// El ejercicio que deberán realizar es el siguiente:
-
-// 👉 Les dejamos como archivo adjunto la base para realizar el ejercicio, en la cual tendrán el html y css vacíos , una carpeta img y el index.js que tendrá el nuevo array de pizzas, en donde cada pizza tendrá una propiedad imagen además de las propiedades que tenía en el ejercicio anterior.
-
-// 👉 Crear un archivo HTML que tenga un input de tipo "number", un botón y un contenedor en el cual renderizar el resultado de la búsqueda que se haga. 
-
 // 👉 Al apretar el botón , deberán capturar el valor ingresado en el input (Que será un número) mediante el evento "submit" si están usando un formulario o bien el evento "click" si quieren manejarlo desde el botón.
 
 // 👉 Si el número ingresado en el input es valido(existe una pizza cuyo id coincida con el número ingresado en el input), se deberá renderizar en el contenedor una card con los datos de la pizza cuyo id coincida con el número ingresado en el input. La card deberá contener mínimamente el nombre, imagen y y precio de la pizza (Estilizarlo con CSS 🎨) 
@@ -17,8 +11,6 @@
 // ¿Cuál es el desafío final?
 
 // Deberán guardar en localStorage la última pizza buscada y renderizada, y al recargar la página será esa pizza la que se deberá mostrar en la página. No guardar en el localstorage en caso de que lo buscado haya generado un error, solamente persistir los datos cuando se haya encontrado una pizza.
-
-
 const pizzas = [
   {
     id: 1,
@@ -72,15 +64,19 @@ const botoncaja = document.querySelector(".btn_caja");
 const contenedorpizza = document.querySelector(".contenedor_caja");
 const errorpizzas = document.querySelector(".errorpizza");
 
-const busquedaPizzas = pizzas.map((pizza) => {
-  return pizza.id;
-})
+// const busquedaPizzas = pizzas.map((pizza) => {
+//   return pizza.id;
+// })
 
 const loqueescriba = 4;
 
-const busquedaPizzassome = busquedaPizzas.some((pizza) => {
-    return loqueescriba == pizzas.id;
+
+
+const busquedaPizzassome = pizzas.some((pizza) => {
+    return loqueescriba === pizza.id;
 })
+
+console.log(busquedaPizzassome);
 
 const busquedapizzas = (pizzas) => {
   return `
@@ -95,10 +91,10 @@ const busquedapizzas = (pizzas) => {
 
 
 
-const init = () => {
-    form.addEventListener("submit", submitHandler);
-      renderItems();
-}
+// const init = () => {
+//     form.addEventListener("submit", submitHandler);
+//       renderItems();
+// }
 
-init();
+// init();
 
